@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kanbghik Bouchra 🌸💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #ffb3d9, #ff99cc);
+            font-family: 'Short Stack', cursive;
+            overflow: hidden;
+            transition: background 0.5s;
+        }
+
+        .header-gif {
+            width: 280px;
+            height: 280px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .question {
+            color: #ffffff;
+            font-size: 2.8em;
+            text-shadow: 2px 2px #ff80bf;
+            margin: 15px 0;
+            text-align: center;
+            letter-spacing: 1px;
+            padding: 0 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            font-family: 'Short Stack', cursive;
+            text-shadow: 1px 1px rgba(0,0,0,0.1);
+            min-width: 140px;
+        }
+
+        #yesBtn {
+            background: linear-gradient(145deg, #a8e063, #8cc051);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(140, 192, 81, 0.3);
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        #noBtn {
+            background: linear-gradient(145deg, #ff7f7f, #ff6b6b);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+            transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        #noBtn::before,
+        #noBtn::after {
+            content: none !important;
+            animation: none !important;
+        }
+        #success {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .success-gif {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            border-radius: 25px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .success-text {
+            font-size: 4em;
+            color: #ffffff;
+            text-shadow: 3px 3px #ff80bf;
+            animation: pulse 1.5s infinite;
+            margin: 15px;
+            transform: rotate(-5deg);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(2deg); }
+            50% { transform: translateY(-15px) rotate(-2deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.05) rotate(2deg); }
+        }
+
+        button::before,
+        button::after {
+            content: '✨';
+            position: absolute;
+            animation: sparkle 1.5s infinite;
+            opacity: 0;
+            font-size: 18px;
+        }
+
+        button::before {
+            top: -10px;
+            left: -10px;
+        }
+
+        button::after {
+            bottom: -10px;
+            right: -10px;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXAzNDduNmZnYTB6dDk3cWFycXVuc2lvMTF5OG81NnhmM3FvYzh4YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kf3EjrAsKp3P9bhYHG/giphy.gif" class="header-gif" alt="Cute Valentine GIF">
+    <h1 class="question">Will you be my Valentine? 🌷💗</h1>
+    <style>
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .question {
+        color: #ffffff;
+        font-size: 2.8em;
+        text-shadow: 2px 2px #ff80bf;
+        margin: 15px 0;
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 0 20px;
+        display: inline-block;
+        animation: bounce 1s infinite;
+    }
+</style>
+
+    <div class="buttons">
+        <button id="yesBtn">YES! 😍🎀</button>
+        <button id="noBtn">no. 🕸🧹</button>
+    </div>
+
+    <div id="success">
+        <div class="success-text">YAY! I LOVE YOU BOUCHRAA!!🎉💗💖💝</div>
+        <img src="https://cdn.discordapp.com/attachments/1291807377414160448/1469815246096171078/d72fc961a47eec1396864393ff33a566.gif?ex=6989079e&is=6987b61e&hm=d2bb832fac6e10958237e9b6179fadbcb8a787724bbb71bf5d4432e7ceef8f51&" class="success-gif" alt="Celebration GIF">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const noBtn = document.getElementById('noBtn');
+            const yesBtn = document.getElementById('yesBtn');
+            const messages = ["wa bzez ah", "I'll be very sad :('", "Just think about it!!!", "Pleasee!!", "Please pookie!!!", "No :(","I'm going to die'", "Sad ghali :'("];
+            let isMoving = false;
+
+
+            const RUN_DISTANCE = 100;
+            const DANGER_ZONE = 140;
+            const EDGE_BUFFER = 40;
+
+            function moveButton(e) {
+                if (isMoving) return;
+
+                const rect = noBtn.getBoundingClientRect();
+                const btnCenter = {
+                    x: rect.left + rect.width/2,
+                    y: rect.top + rect.height/2
+                };
+
+                const distance = Math.hypot(e.clientX - btnCenter.x, e.clientY - btnCenter.y);
+
+                if (distance < DANGER_ZONE) {
+                    isMoving = true;
+                    const angle = Math.atan2(btnCenter.y - e.clientY, btnCenter.x - e.clientX);
+                    
+
+                    const newX = Math.max(EDGE_BUFFER, 
+                        Math.min(window.innerWidth - rect.width - EDGE_BUFFER, 
+                            rect.left + Math.cos(angle) * RUN_DISTANCE));
+                    
+                    const newY = Math.max(EDGE_BUFFER, 
+                        Math.min(window.innerHeight - rect.height - EDGE_BUFFER, 
+                            rect.top + Math.sin(angle) * RUN_DISTANCE));
+
+
+                    noBtn.style.transform = `translate(${newX - rect.left}px, ${newY - rect.top}px) rotate(${Math.random() * 15 - 7}deg)`;
+                    noBtn.textContent = messages[Math.floor(Math.random() * messages.length)];
+                    
+                    setTimeout(() => {
+                        isMoving = false;
+                        noBtn.style.transform = 'translate(0, 0) rotate(0deg)';
+                    }, 300);
+                }
+            }
+
+            document.addEventListener('mousemove', (e) => {
+                requestAnimationFrame(() => moveButton(e));
+            });
+
+            yesBtn.addEventListener('click', () => {
+                document.body.style.background = '#ffb3d9';
+                document.querySelector('.header-gif').style.display = 'none';
+                document.querySelector('.question').style.display = 'none';
+                document.querySelector('.buttons').style.display = 'none';
+                document.getElementById('success').style.display = 'flex';
+                document.querySelector('.success-text').style.transform = 'rotate(-5deg) scale(1.1)';
+            });
+
+            noBtn.addEventListener('click', () => {
+                noBtn.style.transform = 'scale(0.95) rotate(8deg)';
+                setTimeout(() => {
+                    noBtn.style.transform = 'scale(1) rotate(0deg)';
+                }, 200);
+            });
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+        });
+    </script>
+   <audio id="backgroundMusic" loop>
+    <source src="https://drive.google.com/uc?export=download&id=1A1pF8IPI8iQ7prnBiCTLj58wcQV0yJzq" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        let fadeInterval;
+
+        backgroundMusic.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        });
+
+        backgroundMusic.volume = 0;
+        backgroundMusic.play().catch(() => {
+            document.addEventListener('click', () => {
+                backgroundMusic.play();
+            }, { once: true });
+        });
+        
+        fadeInterval = setInterval(() => {
+            if(backgroundMusic.volume < 0.5) {
+                backgroundMusic.volume += 0.02;
+            } else {
+                clearInterval(fadeInterval);
+            }
+        }, 100);
+
+        yesBtn.addEventListener('click', () => {
+            clearInterval(fadeInterval);
+            fadeInterval = setInterval(() => {
+                if(backgroundMusic.volume < 1) {
+                    backgroundMusic.volume += 0.05;
+                } else {
+                    clearInterval(fadeInterval);
+                }
+            }, 50);
+
+</body>
+</html>
